@@ -33,7 +33,7 @@ class RegisterPage extends Component {
         header={<HeaderContainer isRegister/>}>
         <PolyBackground half={half}>
         <Helmet>
-          <title>회원가입 :: Bitimulate</title>
+          <title>회원가입 :: Gazua</title>
         </Helmet>
         </PolyBackground>
         <Paper>

@@ -63,6 +63,6 @@ export const coinsInHome = [
   'ETC',
   'LTC',
   'XRP',
-  'DASH',
-  'XMR'
+  'XMR',
+  'DASH'
 ];

@@ -34,7 +34,7 @@ const RegisterForm = ({
         }
         <Input maxLength={15} value={nickname} onChange={onChangeNickname} onBlur={onNicknameBlur}/>
       </SectionWithTitle>
-      <SectionWithTitle title="초기자금 설정"> 
+      {/* <SectionWithTitle title="초기자금 설정"> 
         <div className={cx('description')}>
           모의 거래소에서 사용 할 초기자금을 설정하세요. {"\r\n"}초기 자금은 언제든지 설정페이지에서 초기화 할 수 있습니다.
         </div>
@@ -44,7 +44,7 @@ const RegisterForm = ({
         <SelectCurrency currency={currency} onSetCurrency={onSetCurrency}/>
         <h4>금액 선택</h4>
         <InitialMoneyOptions currency={currency} optionIndex={optionIndex} onSelect={onSelectOptionIndex}/>
-      </SectionWithTitle>
+      </SectionWithTitle> */}
       {
           error && (
             <AlignRight><div className={cx('error')}>{ error }</div></AlignRight>
