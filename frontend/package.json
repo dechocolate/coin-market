@@ -123,6 +123,6 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6"
   },
-  "proxy": "http://13.76.166.152:3001/",
+  "proxy": "http://13.76.166.152",
   "proxy2": "https://api.bitimulate.com/"
 }
