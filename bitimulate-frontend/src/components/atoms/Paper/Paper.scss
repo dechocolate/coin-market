@@ -1,0 +1,23 @@
+@import 'utils';
+
+.paper {
+  width: 768px;
+  padding: 2rem;
+  background: white;
+  @include material-shadow(3);
+  z-index: 4;
+  position: absolute;
+  top: 15%;
+  margin-bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%);
+  @include media("<medium") {
+    position: absolute;
+    left: 1rem;
+    transform: none;
+    top: 4.5rem;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+}

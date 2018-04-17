@@ -1,0 +1,130 @@
+@import 'utils';
+
+@keyframes flicker {
+  50% {
+    background: rgba(0, 208, 255, 0.15);
+  }
+}
+
+.trade-history-table-wrapper {
+  overflow-x: auto;
+}
+.trade-history-table {
+  min-width: 340px;
+  &.forPage {
+    margin-top: 1.5rem;
+    .head, .rows .row {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 1rem;
+      @include media("<medium") {
+        font-size: 0.85rem;
+      }
+    }
+    .rows {
+      height: auto;
+    }
+    .head {
+      line-height: 1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: material-color('grey', '800');
+      @include media("<medium") {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  .flicker {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-name: flicker;
+  }
+  .title {
+    padding: 1rem;
+    font-weight: 600;
+    color: material-color('grey', '800');
+  }
+  .head {
+    display: flex;
+    padding-left: 1rem;
+    padding-right :1rem;
+    padding-bottom: 0.5rem;
+    color: material-color('grey', '500');
+    font-size: 0.85rem;
+  }
+  .empty {
+    height: 5rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: material-color('grey', '400');
+    @include flex-center();
+  }
+  .rows {
+    height: 14.375rem;
+    overflow-y: auto;
+    border-top: 1px solid material-color('grey', '200');
+    .scroll-block {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      color: material-color('grey', '400');
+    }
+    .row {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      display: flex;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      font-size: 0.85rem;
+      &:nth-child(even) {
+        background: material-color('grey', '100');
+      }
+      &.personal {
+        cursor: pointer;
+        &:hover {
+          background: rgba(47, 160, 192, 0.1);
+        }
+      }
+    }
+  }
+  .col {
+    flex: 1;
+    // date | type | price | amount | total
+    &.currency {
+      width: 5rem;
+      flex: none;
+      @include media("<medium") {
+        width: 3rem;
+      }
+    }
+    &.time {
+      flex: 0.5;
+      @include media("<medium") {
+        display: none;
+      }
+    }
+    &.type {
+      flex: 0.5;
+      &.buy {
+        color: material-color('green', '700');
+      }
+      &.sell {
+        color: material-color('red', '700');
+      }
+    }
+    &.status {
+      flex: 0.35;
+    }
+    &.waiting {
+      color: material-color('grey', '800');
+    }
+    &.processed {
+      color: material-color('green', '500');
+    }
+    &.cancelled {
+      color: material-color('grey', '400');
+    }
+  }
+
+}

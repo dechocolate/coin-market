@@ -1,0 +1,47 @@
+@import 'utils';
+
+.trade-chart-wrapper {
+  margin-top: 2rem;
+}
+
+.currency-head {
+  padding-top: 0.25rem;
+  padding-bottom: 0.45rem;
+  padding-left: 0.65rem;
+  border-left: 8px solid material-color('cyan', '600');
+  margin-bottom: 1rem;
+  .title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: material-color('grey', '900');
+  }
+  .desc {
+    margin-top: 0.25rem;
+    color: material-color('grey', '700');
+    font-size: 0.85rem;
+  }
+}
+
+.trade-chart {
+  margin-top: 0.5rem;
+  background: material-color('grey', '200');
+  @include material-shadow(1,0.8);
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  .unit {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    z-index: 2;
+    font-size: 0.75rem;
+    color: material-color('grey', '600');
+  }
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+}

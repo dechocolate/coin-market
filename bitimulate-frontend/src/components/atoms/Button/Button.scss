@@ -1,0 +1,120 @@
+@import 'utils';
+
+.button {
+  display: inline-block;
+  font-size: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+
+  // default
+  background: material-color('grey', '300');
+  &:hover {
+    background: material-color('grey', '200');
+  }
+  &:active {
+    background: material-color('grey', '300');
+  }
+
+  &.invert {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    transition: box-shadow .15s ease-in;
+    @include hover() {
+      background: white;
+      color: material-color('grey', '800');
+      @include material-shadow(2);
+    }
+    &:active {
+      @include material-shadow(2, 2);
+      background: rgb(230,230,230);
+      border: 2px solid rgb(230,230,230);
+      color: material-color('grey', '800');
+    }
+  }
+
+  &.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  &.flex + &.flex {
+    margin-left: 1rem;
+  }
+
+  &.flat {
+    border-radius: 2px;
+    transition: all .15s ease-in;
+    &:hover {
+      @include material-shadow(2);
+    }
+    &.white {
+      background: white;
+      border: 1px solid material-color('grey', '100');
+
+      &:hover {
+        background: material-color('grey', '100');
+      }
+      &:active {
+        background: material-color('grey', '100');
+      }
+    }
+    &.teal {
+      color: white;
+      background: material-color('teal', '300');
+      // border: 1px solid material-color('teal', '400');
+      &:hover {
+        background: #6dd0c6;
+        // border: 1px solid material-color('teal', '300');
+      }
+      &:active {
+        background: material-color('teal', '300');
+        // border: 1px solid material-color('teal', '500');
+      }
+    }
+
+    &.dark {
+      color: white;
+      background: material-color('grey', '700');
+      &:hover {
+        background: material-color('grey', '600');
+      }
+      &:active {
+        background: material-color('grey', '800');
+      }
+    }
+
+    &.disabled {
+      background: material-color('grey', '300');
+      color: material-color('grey', '500');
+      cursor: default;
+      &:hover {
+        box-shadow: none;
+        background: material-color('grey', '300');
+      }
+      &:active {
+        background: material-color('grey', '300');
+      }
+    }
+  }
+  &.outline {
+    background: transparent;
+    border: 1px solid material-color('grey', '300');
+    &:hover {
+      border: 1px solid transparent;
+      background: material-color('grey', '100');
+    }
+    &:active {
+      background: material-color('grey', '200');
+    }
+  }
+
+
+}

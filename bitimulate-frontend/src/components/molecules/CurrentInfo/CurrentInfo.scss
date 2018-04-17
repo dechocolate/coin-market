@@ -1,0 +1,13 @@
+@import 'utils';
+
+.current-info {
+  margin-top: 1rem;
+  background: material-color('grey', '200');
+  @include material-shadow(1, 0.5);
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  @include media("<medium") {
+    flex-wrap: wrap;
+  }
+}

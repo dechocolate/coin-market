@@ -1,0 +1,113 @@
+@import 'utils';
+
+.trade-box {
+  .head {
+    background: white;
+    color: material-color('grey', '800');
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .title {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .has-amount {
+      margin-left: auto;
+      font-size: 0.85rem;
+      text-align: right;
+      .desc, .currency {
+        font-weight: 600;
+      }
+    }
+    
+  }
+
+  .user-area {
+    position: relative;
+    .dark-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      background: rgba(50,50,50,0.7);
+      z-index: 2;
+      align-items: center;
+      justify-content: center;
+      color: material-color('grey', '200');
+      font-size: 1.25rem;
+      
+
+    }
+  }
+  .content {
+    padding: 1rem;
+    background: material-color('grey', '100');
+    .text-buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.8rem;
+      .text-button {
+        font-size: 0.8rem;
+        color: material-color('grey', '500');
+        cursor: pointer;
+        &:hover {
+          color: material-color('grey', '700');
+        }
+      }
+      .text-button + .text-button {
+        margin-left: 1rem;
+      }
+    }
+    &.bright {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      .text {
+        font-weight: 600;
+      }
+      .total {
+        margin-left: auto;
+        font-weight: 300;
+        font-size: 1.25rem;
+
+        .base {
+          margin-left: 0.5rem;
+          font-size: 0.9rem;
+          color: material-color('grey', '600');
+        }
+        .fee {
+          color: material-color('grey', '500');
+          font-weight: 400;
+          text-align: right;
+          font-size: 0.75rem;
+        }
+      }
+      background: white;
+    }
+
+    &.bottom {
+      padding-top: 0;
+      padding-bottom: 1rem;
+    }
+  }
+  padding: 0;
+  flex: 1
+}
+
+
+.trade-box + .trade-box {
+  
+  @include media(">=medium") {
+    margin-left: 1rem;  
+  }
+  @include media("<medium") {
+    margin-top: 1rem;
+  }
+
+}
+

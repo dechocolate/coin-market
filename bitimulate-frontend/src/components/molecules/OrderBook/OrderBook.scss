@@ -1,0 +1,21 @@
+@import 'utils';
+
+.order-book {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  @include media("<medium") {
+    flex-direction: column;
+  }
+  .column {
+    flex: 1;
+  }
+  .column + .column {
+    @include media(">=medium") {
+      margin-left: 1rem;  
+    }
+    @include media("<medium") {
+      margin-top: 1rem;
+    }    
+  }
+}

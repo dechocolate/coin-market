@@ -1,0 +1,56 @@
+@import 'utils';
+
+.ranking {
+  .rank-meta {
+    text-align: right;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    .mini {
+      font-size: 0.8rem;
+      color: material-color('grey', '600');
+    }
+  }
+
+  .ranking-list {
+    margin-top: 1rem;
+    .row-desc, .rank-item {
+      display: flex;
+    }
+
+    .row-desc {
+      font-weight: 600;
+      padding: 0.5rem;
+      border-bottom: 2px solid material-color('grey', '500');
+    }
+
+    .rank-item {
+      @include hover() {
+        background: rgba(0,0,0,0.01);
+      }
+      padding: 0.5rem;
+      border-top: 1px solid material-color('grey', '300');
+      color: material-color('grey', '600');
+      font-size: 0.875rem;
+    }
+
+    .num {
+      width: 4rem;
+      @include media("<medium") {
+        width: 3rem;
+      }
+    }
+    .username {
+      flex: 1;
+    }
+    .profit {
+      &.positive {
+        color: material-color('green', '600');
+      }
+      &.negative {
+        color: material-color('red', '600');
+      }
+    }
+  
+  }
+  
+}
