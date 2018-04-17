@@ -38,7 +38,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className={cx('third')}>
-        <div className={cx('responsive', 'grid')}>
+        {/* <div className={cx('responsive', 'grid')}>
           <Link to="/ranking" className={cx('column')}>
             <TrophyIcon/>
             <div className={cx('description')}>
@@ -59,7 +59,7 @@ const HomePage = () => {
           상금은 페이지 내의 광고비를 통해 충당됩니다.<br/>
           여러분들이 이 서비스를 더 자주 사용해주시면, 상금이 더 높아집니다.
           </div>
-        </div>
+        </div> */}
       </div>
       <div className={cx('footer')}>
         <div className={cx('email')}>
